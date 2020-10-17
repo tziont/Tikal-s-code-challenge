@@ -1,0 +1,34 @@
+<div class='buttons-container'>
+  <button (click)='sortByDateA()'>Sort by date accending</button>
+<button (click)='sortByDateD()'>Sort by date deccending</button>
+</div>
+
+<div class='table-container'>
+  <table class='table'>
+    <thead>
+      <tr class='tr header-row'>
+        <th>Agent ID</th>
+        <th>Country</th>
+        <th>Address</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    
+    <tbody class='body'>
+      <tr class='tr' *ngFor="let item of missionsObj">
+        <td class='td'>{{item.agent}}</td>
+        <td class='td'>{{item.country}}</td>
+        <td class='td'>{{item.address}}</td>
+        <td class='td'>{{item.date}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+        <tr class='tr footer-row'>
+          <td class='td'></td>
+          <td class='td'></td>
+          <td class='td'></td>
+          <td class='td'>Missions: {{missionsObj.length}}</td>
+        </tr>
+      </tfoot>
+  </table>
+</div>
